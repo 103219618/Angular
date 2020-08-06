@@ -1,0 +1,9 @@
+.box{
+    border: black 1px solid;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+
+    cursor: pointer;
+}
