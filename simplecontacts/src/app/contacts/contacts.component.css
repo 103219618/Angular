@@ -1,22 +1,21 @@
 .box{
-    border: black 1px solid;
-    border-radius: 2px;
+    border: black 2px solid;
+    border-radius: 4px;
     padding: 10px;
     margin: 10px;
-    text-align: center;
+    display: flex;
+    width: 400px;
 
     cursor: pointer;
 }
 
-.displaypic {
-    border: 1px solid;
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
+.details {
+    margin-left: 50px;
 }
 
-img {
+.displaypic img{
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
-    height: 120px;
-    width: 120px;
 }
