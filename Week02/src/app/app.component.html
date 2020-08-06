@@ -1,1 +1,6 @@
-<h1>Hello {{title}}</h1>
+<h1>{{title}} - Simple Contacts</h1>
+<h3>{{total}}</h3>
+<app-counter title="Syed" (counted)="onCounted($event)"></app-counter>
+<app-counter title="Peabody"(counted)="onCounted($event)"></app-counter>
+<app-counter (counted)="onCounted($event)"></app-counter>
+<app-counter (counted)="onCounted($event)"></app-counter>
