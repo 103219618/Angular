@@ -21,6 +21,6 @@ export class ContactsComponent implements OnInit {
   address: string = "1 Swinburne Rd, Melbourne"
 
   @Input()
-  URL: string = "lego.png"
+  URL: string = "assets/" + "lego.png"
 
 }
