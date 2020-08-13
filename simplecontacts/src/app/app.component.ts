@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'Favourite Contacts';
 
   contacts: Contact[] = [
-    new Contact("Syed Razvi", "Mr", "1 Swinburne Rd, Melbourne", "./assets+lego.png"),
+    new Contact("Syed Razvi", "Mr", "1 Swinburne Rd, Melbourne", "./assets"+"lego.png"),
     new Contact("Chris Hemsworth", "Mr", "123 King Street, Melbourne", "./assets+chris.jpg"),
     new Contact("Jack Sparrow", "Mr", "1 Black Pearl, Atlantic Ocean", ""),
     new Contact("Beyonce", "Ms", "10 Queen Street, Hollywood", ""),
