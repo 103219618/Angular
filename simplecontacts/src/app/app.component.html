@@ -1,7 +1,6 @@
 <h1>{{title}}</h1>
-
-<button (click)="onToggleContacts()">Display/Hide Contacts</button>
-
-<div *ngIf="showContacts === true">
-            <app-contacts *ngFor="let contact of contacts" [contact]="contact"></app-contacts>
-</div>
+<hr />
+<app-contact-list></app-contact-list>
+<hr />
+<app-contact-create></app-contact-create>
+<!-- button (click)="onToggleContacts()">Display/Hide Contacts</button> -->

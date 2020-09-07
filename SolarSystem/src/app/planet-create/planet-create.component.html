@@ -1,0 +1,5 @@
+<p>Do You Want to Add More Planets?</p>
+<input placeholder="Name of the Planet" type="name" #name />
+<input placeholder="Number of Moons" type="moons" #moons />
+<input placeholder="Distance From Sun" type="distancefromSun" #distancefromSun />
+<button (click)="createPlanet(name.value, moons.value, distancefromSun.value)">Add Planet Information!</button>

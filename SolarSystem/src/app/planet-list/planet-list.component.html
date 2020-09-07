@@ -1,0 +1,4 @@
+<h3>Planets</h3>
+<div *ngIf="planetserviceService.showPlanet === true">
+    <app-planets *ngFor="let planet of planetserviceService.planets" [planet]="planet"></app-planets>
+</div>

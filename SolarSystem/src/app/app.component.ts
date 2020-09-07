@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Contact } from './contacts/contact';
+import { Planet } from './planets/planet';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +7,5 @@ import { Contact } from './contacts/contact';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Favourite Contacts';
-
-  /*onToggleContacts() {
-  //  this.showContacts = !this.showContacts;
- }*/
-
+  title = 'Solar System';
 }

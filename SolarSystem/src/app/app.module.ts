@@ -2,16 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ContactsComponent } from './contacts/contacts.component';
-import { ContactListComponent } from './contact-list/contact-list.component';
-import { ContactCreateComponent } from './contact-create/contact-create.component';
+import { PlanetsComponent } from './planets/planets.component';
+import { PlanetListComponent } from './planet-list/planet-list.component';
+import { PlanetCreateComponent } from './planet-create/planet-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactsComponent,
-    ContactListComponent,
-    ContactCreateComponent
+    PlanetsComponent,
+    PlanetListComponent,
+    PlanetCreateComponent
   ],
   imports: [
     BrowserModule
