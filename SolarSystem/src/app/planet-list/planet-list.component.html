@@ -1,4 +1,5 @@
 <h3>Planets</h3>
+<img src="assets/sun.png" width="20%" height="20%">
 <div *ngIf="planetserviceService.showPlanet === true">
     <app-planets *ngFor="let planet of planetserviceService.planets" [planet]="planet"></app-planets>
 </div>

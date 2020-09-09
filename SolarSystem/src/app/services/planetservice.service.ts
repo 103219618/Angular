@@ -8,14 +8,14 @@ export class PlanetserviceService {
 
   
   planets: Planet[] = [
-    new Planet("Mercury", "Zero", 57.91, '/assets/mercury.png'),
-    new Planet("Venus", "Zero", 108.2, 'assets/venus.png'),
-    new Planet("Earth", "One", 149.6, 'assets/earth.png'),
-    new Planet("Mars", "Two", 227.9, 'assets/mars.png'),
-    new Planet("Jupiter", "Seventy Nine", 778.5, 'assets/jupiter.png'),
-    new Planet("Saturn", "Sixty Two", 1434, 'assets/saturn.png'),
-    new Planet("Uranus", "Twenty Seven", 2871, 'assets/uranus.png'),
-    new Planet("Neptune", "Fourteen", 4495, 'assets/neptune.png'),
+    new Planet("Mercury", "0", 57.91, '/assets/mercury.png'),
+    new Planet("Venus", "0", 108.2, 'assets/venus.png'),
+    new Planet("Earth", "1", 149.6, 'assets/earth.png'),
+    new Planet("Mars", "2", 227.9, 'assets/mars.png'),
+    new Planet("Jupiter", "79", 778.5, 'assets/jupiter.png'),
+    new Planet("Saturn", "62", 1434, 'assets/saturn.png'),
+    new Planet("Uranus", "27", 2871, 'assets/uranus.png'),
+    new Planet("Neptune", "14", 4495, 'assets/neptune.png'),
   ]
 
   showPlanet: boolean = true;
