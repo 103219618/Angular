@@ -15,7 +15,7 @@ export class PlanetCreateComponent implements OnInit {
   }
 
   createPlanet(name: string, moons: string, distancefromSun: number, imageUrl: string) {
-    if (name == "" || moons == "" || distancefromSun == 0) {
+    if (name == "" || moons == "" || distancefromSun == 0 || imageUrl == "") {
       alert("Please Provide Details!")
       return;
     }
