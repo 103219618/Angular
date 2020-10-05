@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ArticlesEnvelope } from './article';
+import { ArticlesEnvelope, Article } from './article';
 
 @Component({
   selector: 'app-root',
@@ -10,14 +10,14 @@ import { ArticlesEnvelope } from './article';
 export class AppComponent {
   title = 'angularconduit2020';
 
-  private art: any[];
+  public art: Article[];
   private httpClient: HttpClient;
   constructor(httpClient: HttpClient){
     this.httpClient = httpClient;
   }
 
   login() {
-    let request = this.httpClient.get<ArticlesEnvelope>("https://swindev.me/articles");
+    let request = this.httpClient.get<ArticlesEnvelope>("https://swindev.me/articles"); //https://conduit.productionready.io/api/articles
     request.subscribe((response) => {
       console.log(response);
       this.art = response.articles;

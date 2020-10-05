@@ -1,9 +1,9 @@
-export class ArticlesEnvelope {
+export interface ArticlesEnvelope {
     articles: Article[];
     articlesCount: number;
 }
 
-export class Article {
+export interface Article {
     articleId: number;
     title: string;
 }
