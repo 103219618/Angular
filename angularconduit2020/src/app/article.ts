@@ -4,10 +4,11 @@ export interface ArticlesEnvelope {
 }
 
 export interface ArticleEnvelope {
+    [x: string]: Article;
     articles: Article;
 }
 
-export interface CreateAnonymousCommand {
+export class CreateAnonymousCommand {
     article: Article;
     username: string;
 
