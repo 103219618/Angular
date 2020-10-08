@@ -4,6 +4,8 @@ export interface ArticlesEnvelope {
 }
 
 export interface Article {
-    articleId: number;
+    articleId?: number;
     title: string;
+    description: string;
+    body: string;
 }

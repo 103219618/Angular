@@ -23,8 +23,20 @@ export class ArticlesService {
     this.loading = true;
     this.loaded = false;
     request.subscribe((response) => {
+
       this.articles = response.articles;
+      this.loading = false;
+      this.loaded = true;
+    });
+  }
+
+  createAnonymous(username: string, article: Article) {
+    let request = this.httpClient.post("https://swindev.me/articles/anonymous", );
+    this.loading = true;
+    this.loaded = false;
+    request.subscribe((response) => {
       
+      this.articles = response.articles;
       this.loading = false;
       this.loaded = true;
     });
