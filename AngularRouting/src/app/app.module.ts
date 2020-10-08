@@ -4,14 +4,19 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
-const routes: Routes = [
+import { CatComponent } from './routes/cat/cat.component';
+import { DogComponent } from './routes/dog/dog.component';
 
-  
+const routes: Routes = [
+  { path: "cats", component: CatComponent},
+  { path: "dogs", component: DogComponent},
 ]; // sets up routes constant where you define your routes
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CatComponent,
+    DogComponent
   ],
   imports: [
     BrowserModule,
