@@ -16,4 +16,12 @@ export class AppComponent {
     this.articlesService = articlesService;
   }
 
+  create() {
+    this.articlesService.createAnonymous("Syed", {
+      title: "Study Angular",
+      description: "Work Work Work",
+      body: "Work on the Stuff",
+  });
+}
+
 }

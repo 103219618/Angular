@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Article, ArticlesEnvelope, CreateAnonymousCommand } from './article';
+import { Article, ArticleEnvelope, ArticlesEnvelope, CreateAnonymousCommand } from './article';
 
 @Injectable({
   providedIn: 'root'
@@ -31,12 +31,20 @@ export class ArticlesService {
   }
 
   createAnonymous(username: string, article: Article) {
-    let request = this.httpClient.post<ArticleEnvelope, CreateAnonymousCommand>("https://swindev.me/articles/anonymous", {
+    let request = this.httpClient.post<ArticleEnvelope>("https://swindev.me/articles/anonymous", {
     username: username,
-    article: article,
+    article: article
     } as CreateAnonymousCommand);
 
+    request.subscribe((response) => {
+      // console.log(this.articles) //to see the articles in Console
+      this.articles = [...this.articles, response.article]; //is a new arrat, with new value added
+      // console.log(this.articles) // to see the articles in Console after adding to array from above
+      //console.log(response);
+      this.get();
+    });
 
-    
+
+
   }
 }
