@@ -1,2 +1,11 @@
 <h1>I'm a Dog, I like barking and licking faces!</h1>
 <p>dog works!</p>
+<a routerLink="/dogs/Pug">Pug</a> |
+<a routerLink="/dogs/GermanShepherd">German Shepherd</a> |
+<a routerLink="/dogs/GoldenRetriever">Golder Retriever</a>
+
+<h2>{{breed}}</h2>
+
+<div *ngIf = "breed == 'GoldenRetriever'">
+    <img src="https://i.pinimg.com/originals/0c/e8/cd/0ce8cddcbbb19d11199fa8ae2d81927f.jpg">
+</div>
