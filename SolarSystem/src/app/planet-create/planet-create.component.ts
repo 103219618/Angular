@@ -14,12 +14,13 @@ export class PlanetCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createPlanet(name: string, moons: string, distancefromSun: number, imageUrl: string) {
-    if (name == "" || moons == "" || distancefromSun == 0 || imageUrl == "") {
+  createPlanet(name: string, moons: number, distancefromSun: number, imageUrl: string) {
+    if (name == "" || moons == 0 || distancefromSun == 0 || imageUrl == "") {
       alert("Please Provide Details!")
       return;
     }
     this.planetserviceService.createPlanet(new Planet(name, moons, distancefromSun, imageUrl));
+    this.planetserviceService.sortDistanceFromSun();
   }
   
 }

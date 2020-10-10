@@ -3,11 +3,19 @@
 
 <h3 [class.name]="planet.name">{{planet.name}}</h3>
 
-
+<input [hidden] = "showinput" #editPlanetname type = "text" [value]="planet.name">
+<input [hidden] = "showinput" #editPlanetmoons type = "text" [value]="planet.moons">
+<input [hidden] = "showinput" #editPlanetdist type = "text" [value]="planet.distancefromSun">
 <hr />
 <p [class.orange]="planet.moons">Number of Moons: {{planet.moons}}</p>
 <p [class.orange]="planet.distancefromSun">Distance in Million KM's: {{planet.distancefromSun}}</p>
 <hr />
 
-<button>Delete</button>
-<button>Edit</button>
+<!-- <button>Delete</button>
+<button>Edit</button> -->
+
+<a *ngIf="!editing" href="#" (click)="startEditing()" >Edit</a>
+
+<a *ngIf="editing" href="#" (click)="stopEditing(editPlanetname.value, editPlanetmoons.value, editPlanetdist.value)" >Save |</a>
+
+<a *ngIf="editing" href="#" (click)="deletePlanet(planet.name)" >| Delete</a>
