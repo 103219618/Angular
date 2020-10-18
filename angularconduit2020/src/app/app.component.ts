@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ArticlesEnvelope, Article } from './article';
 import { ArticlesService } from './articles.service';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,12 @@ export class AppComponent {
   title = 'angularconduit2020';
 
   public articlesService: ArticlesService;
-  constructor(articlesService: ArticlesService){
+  constructor(articlesService: ArticlesService, private userService: UserService){
     this.articlesService = articlesService;
+  }
+
+  performLogin() {
+    this.userService.login();
   }
 
   create() {

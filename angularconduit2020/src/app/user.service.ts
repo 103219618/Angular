@@ -11,23 +11,31 @@ export class UserService {
     private httpClient : HttpClient
   ) { }
 
-  /**
- * go and get ArticlesEnvelope from the server ans store it locally
- */
-get() {
+user: User;
+loading : boolean = false;
+
+
+login(email: string, password: string) {
   let request = this.httpClient.post("https://swindev.me/users/login",
   {
     user: {
-      email: "string111",
-      password: "string"
+      //email: "gekki@bob.com",
+      //password: "MyPasswordIsSecure12340"
+
+      email: email, //"string",
+      password: password //"string"
     }
   } as UserLoginCommand
   );
 
   request.subscribe((response) => {
+    console.log(response);
 
   },
   (error) => {
+    if(error.status == 401) {
+      alert("Login Failed. Wrong Username and Password!")
+    }
     console.log("Error from https://swindev.me/users/login", error);
   }
   );
