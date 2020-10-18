@@ -18,7 +18,7 @@ export class AppComponent {
   }
 
   performLogin() {
-    this.userService.login();
+    this.userService.login("string", "string");
   }
 
   create() {
