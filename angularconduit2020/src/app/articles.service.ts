@@ -27,7 +27,11 @@ export class ArticlesService {
       this.articles = response.articles;
       this.loading = false;
       this.loaded = true;
-    });
+    },
+    (error) => {
+      console.log("Error from https://swindev.me/articles", error);
+    }
+    );
   }
 
   createAnonymous(username: string, article: Article) {
